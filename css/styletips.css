@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+.texto{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 9px;
+}
+.texto2{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 9px;
+}
+.texto3{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 9px;
+}
+
+
+
+img{
+
+height:230px;
+width:330px ;
+}

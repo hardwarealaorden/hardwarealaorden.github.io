@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+}
+.texto{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 9px;
+}
+.texto2{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 9px;
+}
+.texto3{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 9px;
+}
+h1{
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button{
+    height: 20px;
+    width: 70px;
+    color: white;
+    background-color: black;
+}
+button:hover{
+    color: white;
+    background-color: peru;
+}
+
+img{
+
+height:230px;
+width:330px ;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="ngrok-skip-browser-warning" content="**">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="js/jquery-min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu a").click(function (event) {
+                event.preventDefault();
+                var pageName = $(this).data("page");
+                $(".content").load(pageName);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/JUAN_XXIII-removebg-preview.png" alt="Logo">
+        </div>
+        <div class="menu">
+            <a href="#" data-page="nosotros.html">Sobre nosotros</a>
+            <a href="#" data-page="tips.html">Tips</a>
+            <a href="#" data-page="componentes.html">Componentes</a>
+            <a href="#" data-page="contacto.html">Contacto</a>
+        </div>
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Contenido aca -->
+    </div>
+	
+	<footer class="footer">
+		<div class="h2">
+			<a href="https://instagram.com/hardwarealaorden?igshid=YTQwZjQ0NmI0OA=="><img class="fotoig" src="img/Instagram_icon.png" alt="instagram"></a>
+			<h2 class="ig">¡Seguinos en nuetro instagram! </h2>
+			<p>&copy; 2023 Mi Página Web. Todos los derechos reservados. Diseñado por <a href="http://www.parroquialjuan23.edu.ar/">Instituto Juan XXIII</a></p>
+		</div>
+	</footer>
+</body>
+
+<script>
+    const menuIcon = document.querySelector(".menu-icon");
+    const menu = document.querySelector(".menu");
+
+    menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("show-menu");
+    });
+</script>

@@ -1,4 +1,4 @@
-<ul class="lista"> 
+<div class="contacto">
 	<center>
 		<div class="container animated">
 			<h2>Formulario de Contacto</h2>
@@ -16,21 +16,10 @@
 						<label for="message">Mensaje:</label>
 						<textarea id="message" name="message" rows="4" required></textarea>
 					</div>
-					<button type="submit" class="submit-button">Enviar</button>
+					<button type="submit" class="submit-button" onclick="enviar()">Enviar</button>
 					<div class="success" id="success-message">Mensaje enviado con éxito.</div>
 				</form>
 			</center>
 		</div>
 	</center>
-
-	<script>
-		const form = document.getElementById("contact-form");
-		const successMessage = document.getElementById("success-message");
-
-		form.addEventListener("submit", function (e) {
-			e.preventDefault();
-			successMessage.classList.add("active");
-			form.reset();
-		});
-	</script>
-</ul>
+</div>

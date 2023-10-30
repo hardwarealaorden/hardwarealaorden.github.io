@@ -14,12 +14,41 @@
                 event.preventDefault();
                 var pageName = $(this).data("page");
                 $(".content").load(pageName);
+                $(".menu").attr("class", "menu");
+                $(".content").load(pageName);
+                $('.content').css('animation', 'none');
+                $('.content').css('opacity', '1');
+                $('.content').css('background-image', 'none');
             });
         });
+
+        function enviar() {
+            const formContact = document.getElementById("contact-form");
+            const popup = document.getElementById("popup");
+            const successMessage = document.getElementById("success-message");
+
+            formContact.addEventListener("submit", function (e) {
+                e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+
+                successMessage.classList.add("active");
+                popup.style.display = "flex"; // Muestra el pop-up después de enviar el formulario
+
+                setTimeout(function () {
+                    popup.style.display = "none"; // Oculta el pop-up después de 3 segundos
+                    window.location.href = "index.html"; // Redirige al inicio (reemplaza con la URL de tu página de inicio)
+                }, 3000); // 3 segundos (3000 milisegundos)
+            });	
+        }
     </script>
 </head>
 
 <body>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p>Gracias por tu comentario.</p>
+        </div>
+    </div>
+        
     <div class="navbar">
         <div class="logo">
             <img src="img/JUAN_XXIII-removebg-preview.png" alt="Logo">
@@ -37,17 +66,19 @@
         </div>
     </div>
 
-    <div class="content">
-        <!-- Contenido aca -->
-    </div>
+    <div class="content"></div>
 	
-	<footer class="footer">
-		<div class="h2">
-			<a href="https://instagram.com/hardwarealaorden?igshid=YTQwZjQ0NmI0OA=="><img class="fotoig" src="img/Instagram_icon.png" alt="instagram"></a>
-			<h2 class="ig">¡Seguinos en nuetro instagram! </h2>
-			<p>&copy; 2023 Mi Página Web. Todos los derechos reservados. Diseñado por <a href="http://www.parroquialjuan23.edu.ar/">Instituto Juan XXIII</a></p>
-		</div>
-	</footer>
+    <footer class="footer">
+        <div class="left">
+            <div class="instagram-container">
+                <a href="https://www.instagram.com/hardwarealaorden/"><img src="img/Instagram_icon.png" alt="Logo de Instagram" class="instagram-logo"></a>
+                <span class="instagram-text">¡Seguinos en nuetro instagram!</span>
+            </div>
+        </div>
+        <div class="right">
+            <span class="copyright">&copy; 2023 Mi Página Web. Todos los derechos reservados. Diseñado por <a href="http://www.parroquialjuan23.edu.ar/">Instituto Juan XXIII</a>.</span>
+        </div>
+    </footer>
 </body>
 
 <script>

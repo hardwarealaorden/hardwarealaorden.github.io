@@ -38,15 +38,6 @@ body {
     animation: fadeInOut 6s ease-in-out infinite; /* Animación de 6 segundos */
 }
 
-@keyframes fadeInOut {
-    0%, 100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-}
-
 .hard{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
@@ -70,22 +61,16 @@ body {
     width: 85px;
 }
 
-@keyframes spin {
-    0% {
-      transform: rotate(0deg); /* Sin rotación */
-    }
-    100% {
-      transform: rotate(360deg); /* Giro completo de 360 grados */
-    }
-  }
-
 .menu {
     background: linear-gradient(to right, #555, #333);
-    /*background-color: #333;*/
     border-radius: 5px;
     padding: 10px;
     display: flex;
-    gap: 20px;
+    gap: 1em;
+}
+
+.menu span {
+    margin-left: 1em;
 }
 
 .menu a {
@@ -107,58 +92,6 @@ body {
     height: 3px;
     background-color: white;
     margin: 5px 0;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .menu.show-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background: linear-gradient(to right, #555, #333);
-        padding: 20px;
-        position: absolute;
-        top: 4.6em;
-        right: 0;
-        z-index: 1;
-    }
-
-    .menu-icon {
-        display: block; 
-    }
-}
-
-@keyframes colorChange {
-    0%, 100% { color: red; }
-    25% { color: blue; }
-    50% { color: green; }
-    75% { color: orange; }
-}
-
-@keyframes moveTitle {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(25px);
-    }
-    50% {
-        transform: translateX(-50px);
-    }
-    75% {
-        transform: translateX(25px);
-    }
-    100% {
-        transform: translateX(0);
-    }
 }
 
 .titulo-mov{
@@ -248,15 +181,6 @@ body {
     display: block;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .animated {
     animation: fadeIn 1s ease-in-out;
 }
@@ -300,13 +224,6 @@ body {
   
 .copyright a {
     color: white;
-}
-
-/* Media query para dispositivos móviles (ajusta el ancho según tus necesidades) */
-@media (max-width: 768px) {
-    .copyright {
-      display: none; /* Oculta el texto de Instagram y el copyright en dispositivos móviles */
-    }
 }
 
 .tarjeta{
@@ -426,8 +343,90 @@ body {
     font-family: sans-serif;
 }
 
+
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.show-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: linear-gradient(to right, #555, #333);
+        padding: 20px;
+        position: absolute;
+        top: 4.6em;
+        right: 0;
+        z-index: 1;
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
+    .copyright {
+      display: block; /* Oculta el texto de Instagram y el copyright en dispositivos móviles */
+    }
+
     .contacto {
         width: 90%;
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg); /* Sin rotación */
+    }
+    100% {
+      transform: rotate(360deg); /* Giro completo de 360 grados */
+    }
+  }
+
+@keyframes colorChange {
+    0%, 100% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+}
+
+@keyframes moveTitle {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(25px);
+    }
+    50% {
+        transform: translateX(-50px);
+    }
+    75% {
+        transform: translateX(25px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

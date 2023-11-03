@@ -24,6 +24,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: white;
+}
+
+
+p {
+    color:white;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 9px;
 }
 
 .content {
@@ -53,7 +62,7 @@ body {
 }
 
 .logo {
-    animation: spin 1s ease-in-out 10s forwards; 
+    /* animation: spin 1s ease-in-out 10s forwards;  */
 }
 
 .logo img {
@@ -103,22 +112,6 @@ body {
     -webkit-text-fill-color: transparent;
     display: inline-block;
     padding: 10px;
-}
-
-.texto{
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
-    margin-left: 9px;
-}
-.texto2{
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
-    margin-left: 9px;
-}
-.texto3{
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
-    margin-left: 9px;
 }
 
 .container {
@@ -242,15 +235,23 @@ body {
   border-radius:15px;
   font-family: sans-serif;
 }
+
 .titulo{
   justify-content:center;
   font-size: 24px;
   color: white;
   padding: 10px 10px 0 10px;;
+  background-color: brown;
+  border-radius: 15px 15px 0 0;
+  font-weight: 800;
+  padding-bottom: 0.4em;
 }
+
 .cuerpo{
   padding: 10px;
-  color: white;
+  color: black;
+  background-color: white;
+  text-align: center;
 }
 .pie{
   background: #6699ff;
@@ -325,6 +326,26 @@ body {
     color: white;
 }
 
+.titulo2 {
+    justify-content:center;
+    font-size: 20px;
+    color: white;
+    padding: 10px 10px 0 0;
+    background-color: brown;
+    border-radius: 15px 15px 15px 15px;
+    font-weight: 800;
+    padding-bottom: 0.4em;
+    text-align: center;
+}
+  
+.subtitulo {
+    justify-content:center;
+    color: white;
+    padding: 10px 10px 0 10px;;
+    font-weight: 600;
+    text-align: center;
+}
+
 .tips img {
     height: 30%;
     width: 30%;
@@ -332,6 +353,7 @@ body {
 
 .contacto {
     position: absolute;
+    color: black;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -341,6 +363,7 @@ body {
     width: 95%;
     margin: 0 auto;
     font-family: sans-serif;
+    text-align: left;
 }
 
 

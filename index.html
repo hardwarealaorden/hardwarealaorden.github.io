@@ -18,11 +18,11 @@
                     window.location.href = "index.html";
                 } else {
                     $(".content").load(pageName);
-                    $(".menu").attr("class", "menu");
                     $(".content").load(pageName);
                     $('.content').css('animation', 'none');
                     $('.content').css('opacity', '1');
                     $('.content').css('background-image', 'none');
+                    $(".menu").attr("class", "menu");
                 }
             });
         });
@@ -91,7 +91,20 @@
     const menuIcon = document.querySelector(".menu-icon");
     const menu = document.querySelector(".menu");
 
+    const content = document.querySelector(".content");
+    const footer = document.querySelector(".footer");
+    const navbar = document.querySelector(".navbar");
+
     menuIcon.addEventListener("click", () => {
         menu.classList.toggle("show-menu");
     });
+
+    content.addEventListener("click", () => {
+        menu.classList.remove("show-menu");
+    });
+
+    footer.addEventListener("click", () => {
+        menu.classList.remove("show-menu");
+    });
+
 </script>
